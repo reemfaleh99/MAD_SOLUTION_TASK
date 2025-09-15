@@ -15,8 +15,10 @@ const HeaderContent = () => {
             <div className="left-line"></div>
             <div className="bottom-line"></div>
           </div>
-          <h1 className="uppercase text-9xl font-semibold text-purple">mad</h1>
-          <h1 className="uppercase text-9xl font-semibold text-purple">
+          <h1 className="uppercase text-6xl lg:text-9xl font-semibold text-purple">
+            mad
+          </h1>
+          <h1 className="uppercase text-6xl lg:text-9xl font-semibold text-purple">
             solution
           </h1>
           <p className="my-8 text-xl font-medium">
@@ -33,7 +35,7 @@ const HeaderContent = () => {
         </div>
       </div>
       {/* intro pic */}
-      <div className="w-1/2 hidden lg:block">
+      <div className="lg:w-1/2 hidden lg:block">
         <img className="" src={headerPic} alt="" />
       </div>
     </div>

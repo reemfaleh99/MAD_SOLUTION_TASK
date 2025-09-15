@@ -6,14 +6,14 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 
 const Header = () => {
   return (
-    <div className="h-screen w-full relative overflow-y-hidden ">
+    <div className="h-screen w-full relative overflow-hidden ">
       {/* circles behind */}
       <div className="grid grid-rows-2 gap-5 absolute top-0 inset-x-0">
-        <div className="flex justify-center gap-72 ">
+        <div className="flex justify-center gap-32 lg:gap-72 ">
           <SpotCircle bgColor="black" blur="3xl" />
           <SpotCircle bgColor="purple" blur="3xl" />
         </div>
-        <div className="flex justify-end gap-72">
+        <div className="flex justify-end gap-32 lg:gap-72">
           <SpotCircle bgColor="pink" blur="3xl" />
           <SpotCircle bgColor="purple" blur="3xl" />
         </div>

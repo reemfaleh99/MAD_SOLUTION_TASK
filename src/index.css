@@ -91,17 +91,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.about-title::after {
-  content: "";
-  position: absolute;
-  left: 25%;
-  top: 50%;
-  width: 15%;
-  height: 5px;
-  background-image: linear-gradient(to right, #6d0997, #e493b3, #b784b7);
-  border-radius: 12px;
-}
-
 .project-title {
   background-image: linear-gradient(
     to right,
@@ -114,27 +103,6 @@
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
-
-.project-title::after {
-  content: "";
-  position: absolute;
-  right: 30%;
-  top: 50%;
-  width: 10%;
-  height: 5px;
-  background-image: linear-gradient(to right, #6d0997, #e493b3, #b784b7);
-  border-radius: 12px;
-}
-.project-title::before {
-  content: "";
-  position: absolute;
-  left: 30%;
-  top: 50%;
-  width: 10%;
-  height: 5px;
-  background-image: linear-gradient(to right, #6d0997, #e493b3, #b784b7);
-  border-radius: 12px;
 }
 
 .box-1 {
@@ -218,84 +186,111 @@
   transform: rotate(-20deg);
 }
 
-@media (max-width: 1800px) {
-  .about-title::after {
-    content: "";
+/*  ABOUT TITLE */
+.about-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 15%;
+  height: 5px;
+  background-image: linear-gradient(to right, #6d0997, #e493b3, #b784b7);
+  border-radius: 12px;
+  transform: translateY(-50%);
+  left: 25%;
+}
 
-    left: 50%;
+@media (min-width: 1025px) {
+  .about-title::after {
+    left: 30%;
+  }
+}
+@media (min-width: 1280px) {
+  .about-title::after {
+    left: 60%;
+  }
+}
+@media (min-width: 1610px) {
+  .about-title::after {
+    left: 40%;
   }
 }
 
 @media (max-width: 1024px) {
   .about-title::after {
-    content: "";
-
-    left: 60%;
+    left: 35%;
+    width: 50%;
   }
 }
 
 @media (max-width: 900px) {
   .about-title::after {
-    content: "";
-
     left: 40%;
   }
 }
+
 @media (max-width: 767px) {
   .about-title::after {
-    content: "";
-
     left: 50%;
   }
 }
 
 @media (max-width: 600px) {
   .about-title::after {
-    content: "";
-
     left: 60%;
+  }
+}
+
+/*  PROJECT TITLE */
+.project-title::after,
+.project-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 15%;
+  height: 5px;
+  background-image: linear-gradient(to right, #6d0997, #e493b3, #b784b7);
+  border-radius: 12px;
+  transform: translateY(-50%);
+}
+
+.project-title::after {
+  right: 0%;
+}
+
+.project-title::before {
+  left: 0%;
+}
+
+@media (min-width: 900px) {
+  .project-title::after {
+    right: 75%;
+  }
+  .project-title::before {
+    left: 75%;
   }
 }
 
 @media (min-width: 1024px) {
   .project-title::after {
-    content: "";
-    right: 69%;
-  }
-  .project-title::before {
-    content: "";
-    left: 69%;
-  }
-}
-
-@media (min-width: 900px) {
-  .project-title::after {
-    content: "";
     right: 75%;
   }
   .project-title::before {
-    content: "";
     left: 75%;
   }
 }
-@media (min-width: 767px) {
+
+@media (min-width: 1600px) {
   .project-title::after {
-    content: "";
-    right: 80%;
+    right: 65%;
   }
   .project-title::before {
-    content: "";
-    left: 80%;
+    left: 65%;
   }
 }
 
 @media (max-width: 767px) {
-  .project-title::after {
-    content: "";
-    right: 100%;
-  }
+  .project-title::after,
   .project-title::before {
-    content: "";
-    left: 100%;
+    display: none;
   }
 }

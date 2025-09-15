@@ -1,0 +1,121 @@
+import React from "react";
+import { AiOutlineLaptop } from "react-icons/ai";
+import { FiFigma } from "react-icons/fi";
+
+const items = [
+  {
+    name: "flutter development",
+    desc: "they play a crucial platform",
+    img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww",
+  },
+  {
+    name: "UI/UX design",
+    desc: "creative and user-friendly designs",
+    img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?fm=jpg&q=60&w=2000",
+  },
+  {
+    name: "frontend development",
+    desc: "modern web applications",
+    img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?fm=jpg&q=60&w=2000",
+  },
+  {
+    name: "flutter development",
+    desc: "they play a crucial platform",
+    img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww",
+  },
+  {
+    name: "UI/UX design",
+    desc: "creative and user-friendly designs",
+    img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?fm=jpg&q=60&w=2000",
+  },
+  {
+    name: "frontend development",
+    desc: "modern web applications",
+    img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?fm=jpg&q=60&w=2000",
+  },
+  {
+    name: "flutter development",
+    desc: "they play a crucial platform",
+    img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww",
+  },
+  {
+    name: "UI/UX design",
+    desc: "creative and user-friendly designs",
+    img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?fm=jpg&q=60&w=2000",
+  },
+  {
+    name: "frontend development",
+    desc: "modern web applications",
+    img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?fm=jpg&q=60&w=2000",
+  },
+  {
+    name: "flutter development",
+    desc: "they play a crucial platform",
+    img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww",
+  },
+  {
+    name: "UI/UX design",
+    desc: "creative and user-friendly designs",
+    img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?fm=jpg&q=60&w=2000",
+  },
+  {
+    name: "frontend development",
+    desc: "modern web applications",
+    img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?fm=jpg&q=60&w=2000",
+  },
+];
+
+const Teams = () => {
+  return (
+    <div className="px-12 relative w-full py-48">
+      <div className="absolute triangle-1 top-1/4 left-0"></div>
+      <div className="absolute triangle-2 bottom-5 right-0"></div>
+      <h3 className="about-title font-bold text-5xl capitalize relative ">
+        meet our team
+      </h3>
+      <p className="my-10 text-xl text-black w-full lg:max-w-1/2  ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        accusantium repellendus ea tempore minima consequuntur. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Consequatur accusantium
+        repellendus ea tempore minima consequuntur.
+      </p>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-20 w-full mt-36">
+        {items.map((item, index) => (
+          <div className="relative flex flex-col items-center " key={index}>
+            <div className="w-48 h-48 box-1 transform rotate-[45deg] relative border-l-0 bg-offwhite">
+              <div className="absolute -bottom-1 -left-[1%] w-[6px] h-1/4 bg-purple"></div>
+            </div>
+            <div className="w-48 h-48 box-2 border-yellow-500 border-5 transform rotate-[45deg] absolute -top-[5%] border-l-0 ">
+              <div className="absolute -bottom-1 -left-[1%] w-[6px] h-1/4 bg-black"></div>
+              <div className="absolute top-1/2 left-1/2 transform -rotate-[45deg] -translate-y-1/2 -translate-x-1/2 text-2xl capitalize text-center font-semibold"></div>
+            </div>
+            <div className="w-48 h-48 box-2 border-yellow-500 border-5 transform rotate-[45deg] border-l-0 overflow-hidden absolute top-0">
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-full h-full object-cover transform -rotate-[45deg]"
+              />
+            </div>
+
+            <h5 className="mt-16 text-xl text-gray font-medium text-purple">
+              {" "}
+              {item.name}
+            </h5>
+            <p className="my-4 text-xl text-black font-medium ">{item.desc}</p>
+            <div className="flex gap-5 text-gray">
+              <div>
+                <AiOutlineLaptop className="w-6 h-6" />
+              </div>
+              <div>
+                <FiFigma className="w-6 h-6" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Teams;

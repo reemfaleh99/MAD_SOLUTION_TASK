@@ -9,6 +9,7 @@
   --color-offwhite: #fff4f4;
 }
 
+/* HEADER TITLE SHAPE */
 .line {
   position: relative;
 }
@@ -60,6 +61,7 @@
   background-color: #737373;
 }
 
+/* ABOUT IMAGE */
 .collage::after {
   content: "";
   position: absolute;
@@ -76,6 +78,7 @@
   z-index: 2;
 }
 
+/* GRADIENT TITLE */
 .about-title,
 .login {
   background-image: linear-gradient(
@@ -105,6 +108,8 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* TEAM AND ABOUT SHAPE */
+
 .box-1 {
   border: 6px solid;
   border-image: linear-gradient(to right, #6d0997, #e493b3) 1;
@@ -116,6 +121,8 @@
   border-image: linear-gradient(to right, #383232, #737373) 1;
   border-left: 0;
 }
+
+/* TRIANLE FOT TEAM DECORATION */
 
 .triangle-1 {
   border-left: 50px solid #b784b7;
@@ -131,6 +138,7 @@
   border-bottom: 50px solid transparent;
 }
 
+/* HOVER NAV */
 .nav-li::before {
   content: "";
   position: absolute;
@@ -147,6 +155,7 @@
   transform: translateX(0);
 }
 
+/* SERVICES PAGE MIDDLE LINE */
 .curve-container {
   display: flex;
   flex-direction: column;

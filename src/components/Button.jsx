@@ -1,5 +1,6 @@
 import React from "react";
 
+// change color and shape
 const colorMap = {
   primary: {
     color: "text-white",

@@ -32,21 +32,26 @@ const items = [
 const Services = () => {
   return (
     <div className="bg-offwhite py-12 px-6 md:px-12">
+      {/* title */}
       <h3 className="project-title font-bold text-5xl capitalize relative text-center">
         our services
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-20 my-32 w-full">
         {items.map((item, index) => (
           <div className="relative flex flex-col items-center " key={index}>
+            {/* first shape */}
             <div className="w-48 h-48 box-1 transform rotate-[45deg] relative border-l-0 ">
               <div className="absolute -bottom-1 -left-[1%] w-[6px] h-1/4 bg-purple"></div>
             </div>
-            <div className="w-48 h-48 box-2 border-yellow-500 border-5 transform rotate-[45deg] absolute -top-[5%] border-l-0 ">
+            {/* ssecond shape */}
+            <div className="w-48 h-48 box-2 transform rotate-[45deg] absolute -top-[5%] border-l-0 ">
               <div className="absolute -bottom-1 -left-[1%] w-[6px] h-1/4 bg-black"></div>
+              {/* name */}
               <div className="absolute top-1/2 left-1/2 transform -rotate-[45deg] -translate-y-1/2 -translate-x-1/2 text-2xl capitalize text-center font-semibold">
                 {item.name}
               </div>
             </div>
+            {/* description */}
             <p className="mt-16 text-xl text-gray font-medium w-3/4">
               {item.desc}
             </p>

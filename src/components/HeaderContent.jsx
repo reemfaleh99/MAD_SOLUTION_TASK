@@ -8,6 +8,7 @@ const HeaderContent = () => {
   return (
     <div className="px-12 flex justify-between gap-24 absolute top-1/2 transform -translate-y-1/4">
       <div>
+        {/* mad solutiion rectangle shape and info */}
         <div className="relative title">
           <div className="lines">
             <div className="top-line"></div>
@@ -31,6 +32,7 @@ const HeaderContent = () => {
           </Link>
         </div>
       </div>
+      {/* intro pic */}
       <div className="w-1/2 hidden lg:block">
         <img className="" src={headerPic} alt="" />
       </div>

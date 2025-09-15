@@ -25,11 +25,14 @@ const items = [
 const Team = () => {
   return (
     <div className="relative px-6 md:px-12">
+      {/* circles */}
       <div className="absolute w-5 h-5 border-4 border-lilac rounded-full top-1/3 left-2/3"></div>
       <div className="absolute w-5 h-5 border-4 border-lilac rounded-full top-1/2 left-1/3"></div>
       <div className="absolute w-5 h-5 border-4 border-lilac rounded-full bottom-5 right-1/4"></div>
+      {/* triangles */}
       <div className="absolute triangle-1 top-30 left-0"></div>
       <div className="absolute triangle-2 bottom-30 right-0"></div>
+      {/* title */}
       <h3 className="project-title font-bold text-5xl capitalize relative text-center mt-32">
         meet our team
       </h3>
@@ -41,13 +44,16 @@ const Team = () => {
       <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-20 my-32 w-full">
         {items.map((item, index) => (
           <div className="relative flex flex-col items-center " key={index}>
+            {/* shape */}
             <div className="w-48 h-48 box-1 transform rotate-[45deg] relative border-l-0 bg-offwhite">
               <div className="absolute -bottom-1 -left-[1%] w-[6px] h-1/4 bg-purple"></div>
             </div>
+            {/* shape */}
             <div className="w-48 h-48 box-2 border-yellow-500 border-5 transform rotate-[45deg] absolute -top-[5%] border-l-0 ">
               <div className="absolute -bottom-1 -left-[1%] w-[6px] h-1/4 bg-black"></div>
               <div className="absolute top-1/2 left-1/2 transform -rotate-[45deg] -translate-y-1/2 -translate-x-1/2 text-2xl capitalize text-center font-semibold"></div>
             </div>
+            {/* image inside shape */}
             <div className="w-48 h-48 box-2  border-5 transform rotate-[45deg] border-l-0 overflow-hidden absolute top-0">
               <img
                 src={item.img}
@@ -55,12 +61,13 @@ const Team = () => {
                 className="w-full h-full object-cover transform -rotate-[45deg]"
               />
             </div>
-
+            {/* name */}
             <h5 className="mt-16 text-xl text-gray font-medium text-purple">
-              {" "}
               {item.name}
             </h5>
+            {/* description */}
             <p className="my-4 text-xl text-black font-medium ">{item.desc}</p>
+            {/* icons */}
             <div className="flex gap-5 text-gray">
               <div>
                 <AiOutlineLaptop className="w-6 h-6" />

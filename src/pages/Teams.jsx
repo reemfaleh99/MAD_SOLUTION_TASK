@@ -67,6 +67,7 @@ const items = [
 
 const Teams = () => {
   return (
+    // shows all the teams
     <div className="px-12 relative w-full py-48">
       <div className="absolute triangle-1 top-1/4 left-0"></div>
       <div className="absolute triangle-2 bottom-5 right-0"></div>

@@ -3,6 +3,7 @@ import SpotCircle from "../components/SpotCircle";
 
 const Projects = () => {
   return (
+    // shows all the projects
     <div className="my-32 px-12  w-full py-48 mx-auto space-y-24">
       <h3 className="project-title font-bold text-5xl capitalize relative text-center">
         see our projects

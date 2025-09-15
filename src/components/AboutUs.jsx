@@ -5,6 +5,7 @@ import Button from "./Button";
 const AboutUs = () => {
   return (
     <div className="bg-white flex items-center h-auto md:h-screen w-full justify-between px-6 md:px-12 py-12">
+      {/* left side which contains pic */}
       <div className="w-1/2 relative h-2/3 collage w-[min(92vw,900px)] hidden xl:block">
         <img
           src="https://plus.unsplash.com/premium_photo-1675859364880-198e17c9376a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -22,6 +23,7 @@ const AboutUs = () => {
           className="absolute w-[45%] bottom-[15%] left-0"
         />
       </div>
+      {/* about us introduction */}
       <div className="w-full xl:w-1/2">
         <h3 className="about-title font-bold text-2xl md:text-5xl capitalize relative">
           about us

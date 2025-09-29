@@ -2,6 +2,10 @@ import React from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const items = [
   {
     name: "flutter development",
@@ -30,6 +34,21 @@ const items = [
 ];
 
 const Services = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    gsap.from(".service", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".service",
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
   return (
     <div className="bg-offwhite py-12 px-6 md:px-12">
       {/* title */}
@@ -38,7 +57,10 @@ const Services = () => {
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-20 my-32 w-full">
         {items.map((item, index) => (
-          <div className="relative flex flex-col items-center " key={index}>
+          <div
+            className="service relative flex flex-col items-center "
+            key={index}
+          >
             {/* first shape */}
             <div className="w-48 h-48 box-1 transform rotate-[45deg] relative border-l-0 ">
               <div className="absolute -bottom-1 -left-[1%] w-[6px] h-1/4 bg-purple"></div>

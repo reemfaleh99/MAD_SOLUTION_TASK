@@ -2,6 +2,10 @@ import React from "react";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { FiFigma } from "react-icons/fi";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const items = [
   {
     name: "flutter development",
@@ -66,6 +70,22 @@ const items = [
 ];
 
 const Teams = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    gsap.from(".team", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".team",
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
+
   return (
     // shows all the teams
     <div className="px-12 relative w-full py-48">
@@ -83,7 +103,10 @@ const Teams = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-20 w-full mt-36">
         {items.map((item, index) => (
-          <div className="relative flex flex-col items-center " key={index}>
+          <div
+            className="team relative flex flex-col items-center "
+            key={index}
+          >
             <div className="w-48 h-48 box-1 transform rotate-[45deg] relative border-l-0 bg-offwhite">
               <div className="absolute -bottom-1 -left-[1%] w-[6px] h-1/4 bg-purple"></div>
             </div>

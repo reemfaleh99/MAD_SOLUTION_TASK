@@ -11,10 +11,11 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  //arrow left
   const prevProject = () => {
     setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
   };
-
+  //arrow right
   const nextProject = () => {
     setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
   };

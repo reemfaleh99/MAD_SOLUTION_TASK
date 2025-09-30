@@ -11,6 +11,7 @@ import Button from "../components/Button";
 const Login = () => {
   return (
     <div className="min-h-screen flex lg:flex-row flex-col justify-between gap-24 items-center px-12 my-36">
+      {/* login  inputs*/}
       <div className="w-full lg:w-1/2">
         <h3 className="login font-bold text-5xl capitalize ">let's talk</h3>
         <p className=" mt-10 text-xl text-black">
@@ -20,6 +21,7 @@ const Login = () => {
           repellendus ea tempore minima consequuntur
         </p>
         <form className="my-12">
+          {/* name input */}
           <div className="flex flex-col">
             <label className="text-purple font-semibold text-lg">
               Your name
@@ -29,6 +31,7 @@ const Login = () => {
               className="bg-lilac w-full 2xl:w-1/2 p-4 rounded-2xl my-2"
             />
           </div>
+          {/* email input */}
           <div className="flex flex-col my-4">
             <label className="text-purple font-semibold text-lg">
               Your e-mail
@@ -50,6 +53,7 @@ const Login = () => {
           <Button children="send message" />
         </form>
       </div>
+      {/* login  introduction*/}
       <div className="flex flex-col items-center gap-10 w-1/2">
         <img src={login} alt="" className="w-full h-[550px] hidden md:block" />
         <div className="text-gray text-xl">

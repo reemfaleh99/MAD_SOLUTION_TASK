@@ -28,7 +28,7 @@ const HeaderContent = () => {
             animi sapiente ad autem ipsa eius!
           </p>
         </div>
-        <div className="my-24">
+        <div className="my-48 lg:my-24">
           <Link to="login">
             <Button children="get started" />
           </Link>

@@ -49,10 +49,10 @@ const Header = () => {
       {/* header info */}
       <HeaderContent />
       <div
-        className="absolute bottom-0 left-1/2 bg-white px-5 py-2 rounded-tl-full rounded-tr-full cursor-pointer hover:bg-lilac transition duration-300"
+        className="absolute bottom-0 left-1/2 bg-white px-5 py-2 rounded-tl-full rounded-tr-full cursor-pointer hover:bg-lilac transition duration-300 hidden lg:block"
         onClick={handleClickDown}
       >
-        <AiOutlineArrowDown className="lg:w-10 lg:h-10 w-5 h-5" />
+        <AiOutlineArrowDown className="w-10 h-10" />
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Header = () => {
+  //animation
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
@@ -24,9 +25,11 @@ const Header = () => {
       },
     });
   });
+
+  //take you down
   const handleClickDown = () => {
     window.scrollBy({
-      top: window.innerHeight, // 100vh = طول الشاشة الحالية
+      top: window.innerHeight,
       behavior: "smooth",
     });
   };

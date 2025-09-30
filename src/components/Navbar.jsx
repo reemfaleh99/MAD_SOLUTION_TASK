@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import { AiOutlineMenu, AiOutlinePhone } from "react-icons/ai";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const navItem = [
   { name: "home", path: "/" },
@@ -25,6 +25,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navigate = useNavigate();
+  //to refresh the page when route is "/"
+  const handleClick = (path) => {
+    if (path === window.location.pathname) {
+      window.location.reload();
+    } else {
+      navigate(path);
+    }
+  };
+
   return (
     <div
       className={`fixed p-12 top-0 flex items-center justify-between w-full inset-x-0 z-50 transition-colors duration-300 ${
@@ -37,7 +47,10 @@ const Navbar = () => {
       <ul className="gap-5 hidden lg:flex items-center">
         {navItem.map((item, index) => (
           <Link to={item.path} key={index}>
-            <li className="text-xl font-medium capitalize cursor-pointer hover:text-purple duration-300 relative overflow-hidden nav-li">
+            <li
+              className="text-xl font-medium capitalize cursor-pointer hover:text-purple duration-300 relative overflow-hidden nav-li"
+              onClick={() => handleClick(item.path)}
+            >
               {item.name}
             </li>
           </Link>
